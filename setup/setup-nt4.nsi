@@ -127,18 +127,18 @@ SectionGroupEnd
 
 SectionGroup /e "Windows NT 4.0 $(Updates)" NT4Updates
 	Section "Windows NT 4.0 $(SP) 6a" NT4SP6A
-		SectionIn Ro
+		; SectionIn Ro
 		Call InstallNT4SP6A ; SP6I386
 		Call RebootIfRequired
 	SectionEnd
 
 	Section "Windows NT 4.0 Security Rollup Package" NT4ROLLUP
-		SectionIn Ro
+		; SectionIn Ro
 		Call InstallNT4Rollup ; Q299444
 	SectionEnd
 
 	Section "Windows NT 4.0 $(PostSP) 6a $(Updates)" NT4POSTSP
-		SectionIn Ro
+		; SectionIn Ro
 		; Workstation/Server
 		Call InstallKB243649
 		Call InstallKB304158
