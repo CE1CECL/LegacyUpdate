@@ -186,14 +186,14 @@ SectionEnd
 
 ; Win2k prerequisities
 Section "$(IE) 6.0 $(SP) 1" IE6SP1
-	SectionIn Ro
+	; SectionIn Ro
 	${RebootIfRequired}
 	Call InstallIE6
 	${RebootIfRequired}
 SectionEnd
 
 Section "Windows 2000 $(SP) 4" W2KSP4
-	SectionIn Ro
+	; SectionIn Ro
 	${RebootIfRequired}
 	Call InstallW2KSP4
 	Call InstallW2KUR1
@@ -230,7 +230,7 @@ ${MementoSectionEnd}
 
 ; Vista prerequisities
 Section "Windows Vista $(SP) 2" VISTASP2
-	SectionIn Ro
+	; SectionIn Ro
 	${RebootIfRequired}
 	Call InstallVistaSP1
 	${RebootIfRequired}
@@ -239,7 +239,7 @@ Section "Windows Vista $(SP) 2" VISTASP2
 SectionEnd
 
 Section "$(SectionSSU)" VISTASSU
-	SectionIn Ro
+	; SectionIn Ro
 	${RebootIfRequired}
 	Call InstallKB3205638
 	Call InstallKB4012583
@@ -260,13 +260,13 @@ ${MementoSectionEnd}
 
 ; 7 prerequisities
 Section "Windows 7 $(SP) 1" WIN7SP1
-	SectionIn Ro
+	; SectionIn Ro
 	Call InstallWin7SP1
 	${RebootIfRequired}
 SectionEnd
 
 Section "$(SectionSSU)" WIN7SSU
-	SectionIn Ro
+	; SectionIn Ro
 	${RebootIfRequired}
 	Call InstallKB3138612
 	Call InstallKB4474419
@@ -276,7 +276,7 @@ SectionEnd
 
 ; Windows Home Server 2011 is based on Server 2008 R2, but has its own separate "rollup" updates
 Section "$(SectionWHS2011U4)" WHS2011U4
-	SectionIn Ro
+	; SectionIn Ro
 	${RebootIfRequired}
 	Call InstallKB2757011
 	${RebootIfRequired}
@@ -284,7 +284,7 @@ SectionEnd
 
 ; 8 prerequisities
 Section "$(SectionSSU)" WIN8SSU
-	SectionIn Ro
+	; SectionIn Ro
 	${RebootIfRequired}
 	Call InstallKB4598297
 	${RebootIfRequired}
@@ -292,7 +292,7 @@ SectionEnd
 
 ; 8.1 prerequisities
 Section "Windows 8.1 $(Update) 1" WIN81U1
-	SectionIn Ro
+	; SectionIn Ro
 	${RebootIfRequired}
 	Call InstallKB3021910
 	Call InstallClearCompressionFlag
@@ -305,7 +305,7 @@ Section "Windows 8.1 $(Update) 1" WIN81U1
 SectionEnd
 
 Section "$(SectionSSU)" WIN81SSU
-	SectionIn Ro
+	; SectionIn Ro
 	${RebootIfRequired}
 	Call InstallKB3021910
 	${RebootIfRequired}
@@ -315,7 +315,7 @@ SectionEnd
 !include DownloadWUA.nsh
 
 Section "$(SectionWUA)" WUA
-	SectionIn Ro
+	; SectionIn Ro
 	${RebootIfRequired}
 	Call InstallWUA
 SectionEnd
